@@ -83,7 +83,7 @@ export default function LoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 text-gray-800 placeholder:text-gray-400 bg-white/80 transition-all duration-200 text-sm sm:text-base"
-              style={{'--tw-ring-color': '#C70CB9'}}
+              style={{'--tw-ring-color': '#C70CB9'} as React.CSSProperties}
               onFocus={(e) => {
                 e.target.style.borderColor = '#C70CB9';
                 e.target.style.boxShadow = '0 0 0 3px rgba(199, 12, 185, 0.1)';
@@ -106,7 +106,7 @@ export default function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 text-gray-800 placeholder:text-gray-400 bg-white/80 transition-all duration-200 text-sm sm:text-base"
-              style={{'--tw-ring-color': '#C70CB9'}}
+              style={{'--tw-ring-color': '#C70CB9'} as React.CSSProperties}
               onFocus={(e) => {
                 e.target.style.borderColor = '#C70CB9';
                 e.target.style.boxShadow = '0 0 0 3px rgba(199, 12, 185, 0.1)';
@@ -133,7 +133,7 @@ export default function LoginPage() {
             style={{
               background: 'linear-gradient(to right, #C70CB9, #A00A9A)',
               '--tw-ring-color': '#C70CB9'
-            }}
+            } as React.CSSProperties}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'linear-gradient(to right, #A00A9A, #8B0A7A)';
             }}
