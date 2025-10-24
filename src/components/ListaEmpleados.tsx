@@ -609,7 +609,7 @@ const ListaEmpleados: React.FC<ListaEmpleadosProps> = ({ tipo }) => {
                           style={{
                             backgroundColor: '#C70CB9',
                             '--tw-ring-color': '#C70CB9'
-                          }}
+                          } as React.CSSProperties}
                           onMouseEnter={(e) => {
                             e.currentTarget.style.backgroundColor = '#A00A9A';
                           }}
@@ -688,7 +688,7 @@ const ListaEmpleados: React.FC<ListaEmpleadosProps> = ({ tipo }) => {
                               style={{
                                 backgroundColor: '#C70CB9',
                                 '--tw-ring-color': '#C70CB9'
-                              }}
+                              } as React.CSSProperties}
                               onMouseEnter={(e) => {
                                 e.currentTarget.style.backgroundColor = '#A00A9A';
                               }}
@@ -806,7 +806,7 @@ const ListaEmpleados: React.FC<ListaEmpleadosProps> = ({ tipo }) => {
                     onChange={(e) => setResponsableAlta(e.target.value)}
                     placeholder="Nombre del responsable del alta"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
-                    style={{'--tw-ring-color': '#C70CB9'}}
+                    style={{'--tw-ring-color': '#C70CB9'} as React.CSSProperties}
                     onFocus={(e) => {
                       e.target.style.borderColor = '#C70CB9';
                       e.target.style.boxShadow = '0 0 0 3px rgba(199, 12, 185, 0.1)';
@@ -824,7 +824,7 @@ const ListaEmpleados: React.FC<ListaEmpleadosProps> = ({ tipo }) => {
                       value={contratistaAlta}
                       onChange={(e) => setContratistaAlta(e.target.value)}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
-                    style={{'--tw-ring-color': '#C70CB9'}}
+                    style={{'--tw-ring-color': '#C70CB9'} as React.CSSProperties}
                     onFocus={(e) => {
                       e.target.style.borderColor = '#C70CB9';
                       e.target.style.boxShadow = '0 0 0 3px rgba(199, 12, 185, 0.1)';
@@ -851,7 +851,7 @@ const ListaEmpleados: React.FC<ListaEmpleadosProps> = ({ tipo }) => {
                   style={{
                     backgroundColor: '#C70CB9',
                     '--tw-ring-color': '#C70CB9'
-                  }}
+                  } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = '#A00A9A';
                   }}

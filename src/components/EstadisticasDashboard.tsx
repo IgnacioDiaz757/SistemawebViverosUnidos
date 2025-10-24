@@ -244,7 +244,7 @@ const EstadisticasDashboard: React.FC = () => {
                 style={{
                   backgroundColor: '#C70CB9',
                   '--tw-ring-color': '#C70CB9'
-                }}
+                } as React.CSSProperties}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#A00A9A';
                 }}
