@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --secondary: #64748b;
+  --success: #C70CB9;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --primary: #60a5fa;
+    --primary-dark: #3b82f6;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* Texto negro por defecto en todo el sistema */
+body, h1, h2, h3, h4, h5, h6, p, label, span, div, li, dt, dd, th, td, a {
+  color: #000;
+}
+
+/* Placeholders más oscuros para legibilidad */
+::placeholder {
+  color: #4b5563; /* gray-600 */
+}
+input::placeholder,
+textarea::placeholder {
+  color: #4b5563;
+}
+
+/* Forzar color negro en inputs y contra autofill de navegadores móviles */
+input, select, textarea, button {
+  color: #000 !important;
+}
+
+/* iOS/Android autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 9999s ease-out 0s;
+}
+
+/* Estilos personalizados para formularios */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
+}
+
+.form-input:focus {
+  @apply ring-2 ring-blue-500 border-blue-500;
+}
+
+.form-input.error {
+  @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-gray-600 text-white font-medium rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-200;
+}
+
+.btn-danger {
+  @apply px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200;
+}
+
+.btn-success {
+  @apply px-4 py-2 text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200;
+  background-color: #C70CB9;
+}
+.btn-success:hover {
+  background-color: #A00A9A;
+}
+.btn-success:focus {
+  --tw-ring-color: #C70CB9;
+}
+
+/* Animaciones suaves */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para tablas */
+.table-container {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.table-header {
+  @apply bg-gray-50 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.table-cell {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+.table-row {
+  @apply hover:bg-gray-50 transition-colors duration-150;
+}
+
+/* Estilos para badges/etiquetas */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-success {
+  background-color: #F3E5F2;
+  color: #C70CB9;
+}
+
+.badge-secondary {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.badge-primary {
+  @apply bg-blue-100 text-blue-800;
+}
+
+/* Estilos para errores de validación */
+.error-message {
+  @apply text-red-500 text-sm mt-1;
+}
+
+.error-message.duplicate {
+  @apply bg-red-50 border border-red-200 rounded-md p-2 text-red-700;
+}
+
+.error-message.duplicate::before {
+  content: "⚠️ ";
+}
+
+/* Mejoras para accesibilidad */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
+
+/* Estilos para estados de carga */
+.loading {
+  @apply animate-pulse;
+}
+
+/* Responsividad mejorada */
+@media (max-width: 768px) {
+  .table-container {
+    @apply overflow-x-auto;
+  }
+  
+  .mobile-stack {
+    @apply flex flex-col space-y-2;
+  }
+}

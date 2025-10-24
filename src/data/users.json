@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "email": "admin@cooperativa.com",
+    "nombre": "Administrador",
+    "apellido": "Principal",
+    "rol": "admin",
+    "activo": true,
+    "fechaCreacion": "2025-09-26T13:29:56.941Z",
+    "password": "$2b$12$8qL9szjjX3wNjp3lkZoWdOHF1Zam08duhwFG1daafMCdendeL8Gnu"
+  },
+  {
+    "id": "1758893396944",
+    "fechaCreacion": "2025-09-26T13:29:56.944Z",
+    "email": "ignadiazcab1905@gmail.com",
+    "nombre": "Ignacio",
+    "apellido": "Diaz",
+    "rol": "admin",
+    "activo": true,
+    "password": "$2b$12$/KWsz6LBghpm85AtOQzhLOIYwF3eOsuIwgkh1Dxps9Zn6aq0UrneW"
+  }
+]
